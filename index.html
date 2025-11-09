@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>💰 Personal Finance Tracker</h1>
+
+  <button id="toggle-theme">🌙 Dark Mode</button>
+
+  <form id="transaction-form">
+    <input type="text" id="desc" placeholder="Description" required />
+    <input type="number" id="amount" placeholder="Amount (+/-)" required />
+    <select id="category">
+      <option value="General">General</option>
+      <option value="Food">Food</option>
+      <option value="Rent">Rent</option>
+      <option value="Shopping">Shopping</option>
+    </select>
+    <button type="submit">Add</button>
+  </form>
+
+  <label for="filter">Filter by Category:</label>
+  <select id="filter">
+    <option value="All">All</option>
+    <option value="Food">Food</option>
+    <option value="Rent">Rent</option>
+    <option value="Shopping">Shopping</option>
+    <option value="General">General</option>
+  </select>
+
+  <ul id="transactions"></ul>
+
+  <div id="summary">
+    <p>Income: ₹<span id="income">0</span></p>
+    <p>Expenses: ₹<span id="expenses">0</span></p>
+    <p>Balance: ₹<span id="balance">0</span></p>
+  </div>
+
+  <canvas id="categoryChart" width="400" height="400"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
